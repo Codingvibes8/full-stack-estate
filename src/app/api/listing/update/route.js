@@ -1,5 +1,5 @@
-import Listing from '../../../../lib/models/listing.model.js';
-import { connect } from '../../../../lib/mongodb/mongoose.js';
+import Listing from '@/lib/models/listing.model';
+import { connect } from '@/lib/mongodb/mongoose';
 import { currentUser } from '@clerk/nextjs/server';
 export const POST = async (req) => {
   const user = await currentUser();
