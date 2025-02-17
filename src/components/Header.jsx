@@ -33,9 +33,9 @@ export default function Header() {
     <header className='bg-slate-200 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link href='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Sahand</span>
-            <span className='text-slate-700'>Estate</span>
+          <h1 className='font-bold font-serif text-2xl flex flex-wrap'>
+            <span className='text-red-500'>Zen</span>
+            <span className='text-slate-900'>Estate</span>
           </h1>
         </Link>
         <form
@@ -69,7 +69,7 @@ export default function Header() {
           </SignedIn>
           <SignedOut>
             <Link href='/sign-in'>
-              <li className='hidden md:inline text-slate-700 hover:underline'>
+              <li className='block text-white bg-blue-700 px-4 py-2 rounded-lg '>
                 Sign In
               </li>
             </Link>
