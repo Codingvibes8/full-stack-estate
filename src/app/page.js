@@ -1,8 +1,10 @@
 import Link from 'next/link';
-
+import About from './about/page';
 export default function Home() {
   return (
-    <div>
+   
+    <>
+ 
       
       <div className='relative bg-hamstead bg-cover bg-center bg-fixed flex flex-col gap-6 p-28 px-8 md:px-16 min-h-screen max-w-6xl mx-auto md:items-center'>
         <div className='absolute inset-0 w-full h-full bg-black/70'></div>
@@ -84,6 +86,9 @@ export default function Home() {
           </div>
       
       </div>
-    </div>
+    
+    <About/>
+    
+    </>
   );
 }
