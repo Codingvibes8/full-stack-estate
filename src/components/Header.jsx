@@ -14,6 +14,7 @@ export default function Header() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
+    console.log('useEffect in Header');
     const urlParams = new URLSearchParams(searchParams);
     const searchTermFromUrl = urlParams.get('searchTerm');
     if (searchTermFromUrl) {
@@ -22,6 +23,7 @@ export default function Header() {
   }, [searchParams]);
 
   const handleSubmit = (e) => {
+    console.log('handleSubmit in Header');
     e.preventDefault();
     const urlParams = new URLSearchParams(searchParams);
     urlParams.set('searchTerm', searchTerm);
@@ -30,7 +32,7 @@ export default function Header() {
   };
   
   return (
-    <header className='bg-slate-200 shadow-md'>
+    <header className='bg-green-200 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link href='/'>
           <h1 className='font-bold font-serif text-2xl flex flex-wrap'>
@@ -47,7 +49,10 @@ export default function Header() {
             placeholder='Search...'
             className='bg-transparent focus:outline-none w-24 sm:w-64'
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => {
+              console.log('onChange in Header');
+              setSearchTerm(e.target.value);
+            }}
           />
           <button>
             <FaSearch className='text-slate-600' />

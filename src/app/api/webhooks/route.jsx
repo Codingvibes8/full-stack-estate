@@ -54,6 +54,8 @@ export async function POST(req) {
   const eventType = evt?.type;
 
   if (eventType === 'user.created' || eventType === 'user.updated') {
+   console.log(evt?.data); 
+   
     const { first_name, last_name, image_url, email_addresses } = evt?.data;
     try {
       const user = await createOrUpdateUser(

@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <Link
             href={'/'}
-            className='mt-6 inline-block bg-blue-700 px-6 py-3 rounded-lg text-xs sm:text-sm text-blue-100 font-bold hover:underline'
+            className='mt-6 inline-block bg-blue-700 px-6 py-3 rounded-lg text-lg sm:text-xl text-blue-100 font-bold hover:scale-105'
           >
             Let&apos;s get started...
           </Link>
@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
     
-      <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10 bg-slate-200'>
+      <div className='max-w-6xl mx-auto flex flex-col gap-8 my-10 bg-slate-200'>
        
           <div className='text-slate-800'>
             <div className='my-3'>
